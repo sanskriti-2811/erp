@@ -1,0 +1,66 @@
+.orders-calendar-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-left: 20px;
+}
+
+.selected-date-orders {
+  margin-top: 20px;
+}
+
+.orders-calendar-container .react-calendar {
+  width: 100%;
+  max-width: 300px;
+  margin-right: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.orders-calendar-container .react-calendar__tile--active {
+  background-color: #3498db !important;
+  color: white;
+}
+
+.calendar-tile-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.pending {
+  color: #e74c3c;
+}
+
+.shipped {
+  color: #27ae60;
+}
+
+.product-calendar-item {
+  width: 10px;
+  height: 10px;
+  margin: 1px;
+  display: inline-block;
+}
+
+.calendar-tile-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pending {
+  background-color: #ffcccc;
+  color: #ff0000;
+  padding: 5px;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.shipped {
+  background-color: #ccffcc;
+  color: #008000;
+  padding: 5px;
+  border-radius: 5px;
+  margin-top: 5px;
+}

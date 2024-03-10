@@ -1,0 +1,34 @@
+.dashboard-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-left: 20px;
+}
+
+.dashboard-title {
+  color: #3498db;
+  text-align: center;
+}
+
+.total-text {
+  color: #333;
+}
+
+.total-number {
+  color: #333;
+  font-size: 36px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.paper-container {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
