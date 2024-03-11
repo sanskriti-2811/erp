@@ -41,22 +41,37 @@ Copy code
 npm start
 Open your browser and visit: http://localhost:3000
 ## Project Structure
--src/
-├── components/
-│   ├── ProductManagement/
-│   │   ├── ProductForm.js        # Component for adding and editing products.
-│   │   ├── ProductList.js        # Component for displaying a list of products.
-│   │   └── Products.js           # Main component for product management.
-│   ├── OrderManagement/
-│   │   ├── OrderForm.js          # Component for adding and editing orders.
-│   │   ├── OrderList.js          # Component for displaying a list of orders.
-│   │   ├── OrdersCalendar.js     # Component for displaying orders on a calendar.
-│   │   └── Orders.js             # Main component for order management.
-│   └── styles/
-│       ├── ProductManagement.css # CSS file for product management components.
-│       └── OrderManagement.css   # CSS file for order management components.
-├── App.js                        # Main component where other components are rendered.
-└── index.js                      # Entry point of the application.
+
+### Product Management
+
+- **ProductForm.js**: This component is responsible for adding and editing products. It provides a form for users to input product details such as name, category, price, and stock.
+  
+- **ProductList.js**: Displays a list of products. Each product is shown with its name, category, price, and stock. Users can edit or delete products from this list.
+  
+- **Products.js**: Main component for product management. It imports `ProductForm.js` and `ProductList.js` to manage the product-related functionalities.
+
+### Order Management
+
+- **OrderForm.js**: Allows users to add and edit orders. The form includes fields for customer name, order status (Pending or Shipped), and expected delivery date.
+  
+- **OrderList.js**: Displays a list of orders. Each order is shown with its ID, customer name, and status. Users can delete orders from this list.
+  
+- **OrdersCalendar.js**: Displays orders on a calendar. Orders are color-coded based on their status for easy visualization.
+  
+- **Orders.js**: Main component for order management. It includes `OrderForm.js`, `OrderList.js`, and `OrdersCalendar.js` to manage order-related functionalities.
+
+### Styles
+
+- **ProductManagement.css**: Contains CSS styles specific to the product management components.
+  
+- **OrderManagement.css**: Contains CSS styles specific to the order management components.
+
+### Other Files
+
+- **App.js**: The main component of the application where other components are rendered.
+  
+- **index.js**: Entry point of the application, responsible for rendering the `App.js` component.
+
 
 ## Technologies Used
 React.js
