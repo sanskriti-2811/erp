@@ -1,9 +1,15 @@
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
-  background-color: #f0f2f5;
-  color: #333;
+  background-image: url('https://th.bing.com/th/id/OIP.leUdyDGFlNsKhLxaQ3qMxAAAAA?rs=1&pid=ImgDetMain');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: rgba(255, 255, 255, 0.8); /* Adjust the opacity as needed */
+  color: black;
 }
+
+/* Add other CSS styles for your components below */
 
 .container {
   display: flex;
@@ -55,7 +61,7 @@ body {
 
 .main-content {
   flex: 1;
-  padding: 20px;
+  padding: 50px;
 }
 
 .footer {
@@ -63,4 +69,37 @@ body {
   background-color: #c22ecf;
   color: white;
   text-align: center;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 1200px) {
+  .card {
+    flex: 0 1 calc(50% - 20px); /* Two cards in a row */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header-buttons {
+    flex-direction: column;
+  }
+
+  .header-buttons button {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .card {
+    flex: 1 1 calc(100% - 20px); /* Full width for cards */
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .header-title {
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .main-content {
+    padding: 20px;
+  }
 }
