@@ -56,8 +56,8 @@ const OrdersCalendar = ({ ordersData }) => {
 
           return (
             <div className="calendar-tile-content">
-              {pendingCount > 0 && <div className="pending">{pendingCount} Pending</div>}
-              {shippedCount > 0 && <div className="shipped">{shippedCount} Shipped</div>}
+              {pendingCount > 0 && <div className="pending">{pendingCount} </div>}
+              {shippedCount > 0 && <div className="shipped">{shippedCount} </div>}
             </div>
           );
         }}

@@ -21,10 +21,10 @@ function Orders({ ordersData, setOrdersData, totalOrders }) {
 
   return (
     <div className="orders-container">
-      <Typography variant="h4" gutterBottom>
+      <Typography variant="h4" align='center' gutterBottom>
         Order Management
       </Typography>
-      <Typography variant="h6" gutterBottom>
+      <Typography variant="h6"  align='center' gutterBottom>
         Total Orders: {totalOrders}
       </Typography>
 
