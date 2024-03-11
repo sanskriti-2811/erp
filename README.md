@@ -41,7 +41,7 @@ Copy code
 npm start
 Open your browser and visit: http://localhost:3000
 ## Project Structure
-src/
+-src/
 ├── components/
 │   ├── ProductManagement/
 │   │   ├── ProductForm.js        # Component for adding and editing products.
