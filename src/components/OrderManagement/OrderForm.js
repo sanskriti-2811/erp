@@ -1,16 +1,21 @@
-import React, { useState } from 'react';
-import { Typography, TextField, Button, Grid, MenuItem } from '@mui/material'; // Import MenuItem
+import React from 'react';
+import { TextField, Button, Typography, Grid, MenuItem } from '@mui/material';
 
 function OrderForm({ onSubmit }) {
-  const [customerName, setCustomerName] = useState('');
-  const [status, setStatus] = useState('Pending');
-  const [expectedDeliveryDate, setExpectedDeliveryDate] = useState('');
-
+  const [customerName, setCustomerName] = React.useState('');
+  const [status, setStatus] = React.useState('');
+  const [expectedDeliveryDate, setExpectedDeliveryDate] = React.useState('');
+  
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSubmit({ customerName, status, expectedDeliveryDate });
+    const newOrder = {
+      customerName,
+      status,
+      expectedDeliveryDate,
+    };
+    onSubmit(newOrder);
     setCustomerName('');
-    setStatus('Pending');
+    setStatus('');
     setExpectedDeliveryDate('');
   };
 
@@ -18,22 +23,27 @@ function OrderForm({ onSubmit }) {
     <form onSubmit={handleSubmit}>
       <Grid container spacing={2}>
         <Grid item xs={12}>
+          <Typography variant="h6" gutterBottom>
+            Add New Order
+          </Typography>
+        </Grid>
+        <Grid item xs={12}>
           <TextField
+            required
             fullWidth
             label="Customer Name"
             value={customerName}
             onChange={(e) => setCustomerName(e.target.value)}
-            required
           />
         </Grid>
         <Grid item xs={12}>
           <TextField
             select
+            required
             fullWidth
             label="Status"
             value={status}
             onChange={(e) => setStatus(e.target.value)}
-            required
           >
             <MenuItem value="Pending">Pending</MenuItem>
             <MenuItem value="Shipped">Shipped</MenuItem>
@@ -41,16 +51,17 @@ function OrderForm({ onSubmit }) {
         </Grid>
         <Grid item xs={12}>
           <TextField
+            required
             fullWidth
             type="date"
-            label=""
+            label="Expected Delivery Date"
             value={expectedDeliveryDate}
             onChange={(e) => setExpectedDeliveryDate(e.target.value)}
-            required
+            InputLabelProps={{ shrink: true }}
           />
         </Grid>
         <Grid item xs={12}>
-          <Button type="submit" variant="contained" color="primary">
+          <Button variant="contained" color="primary" type="submit">
             Add Order
           </Button>
         </Grid>
