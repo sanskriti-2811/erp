@@ -26,7 +26,7 @@ function Products({ productsData, setProductsData, totalProducts }) {
       <Grid container spacing={3}>
         <Grid item xs={12} md={7}>
           <div style={{ padding: '20px', backgroundColor: '#f9f9f9', borderRadius: '5px' }}>
-            <Typography variant="h5" style={{ marginBottom: '20px' }}>Add New Product</Typography>
+            <Typography variant="h5" style={{ marginBottom: '20px' }}></Typography>
             <ProductForm onSubmit={addProduct} />
           </div>
         </Grid>
