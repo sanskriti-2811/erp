@@ -42,21 +42,22 @@ npm start
 Open your browser and visit: http://localhost:3000
 ## Project Structure
 src/
-components/
-ProductManagement/
-ProductForm.js: Component for adding and editing products.
-ProductList.js: Component for displaying a list of products.
-Products.js: Main component for product management.
-OrderManagement/
-OrderForm.js: Component for adding and editing orders.
-OrderList.js: Component for displaying a list of orders.
-OrdersCalendar.js: Component for displaying orders on a calendar.
-Orders.js: Main component for order management.
-styles/
-ProductManagement.css: CSS file for product management components.
-OrderManagement.css: CSS file for order management components.
-App.js: Main component where other components are rendered.
-index.js: Entry point of the application.
+├── components/
+│   ├── ProductManagement/
+│   │   ├── ProductForm.js        # Component for adding and editing products.
+│   │   ├── ProductList.js        # Component for displaying a list of products.
+│   │   └── Products.js           # Main component for product management.
+│   ├── OrderManagement/
+│   │   ├── OrderForm.js          # Component for adding and editing orders.
+│   │   ├── OrderList.js          # Component for displaying a list of orders.
+│   │   ├── OrdersCalendar.js     # Component for displaying orders on a calendar.
+│   │   └── Orders.js             # Main component for order management.
+│   └── styles/
+│       ├── ProductManagement.css # CSS file for product management components.
+│       └── OrderManagement.css   # CSS file for order management components.
+├── App.js                        # Main component where other components are rendered.
+└── index.js                      # Entry point of the application.
+
 ## Technologies Used
 React.js
 Material-UI
