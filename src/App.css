@@ -9,8 +9,6 @@ body {
   color: black;
 }
 
-/* Add other CSS styles for your components below */
-
 .container {
   display: flex;
   flex-direction: column;
@@ -101,5 +99,13 @@ body {
 
   .main-content {
     padding: 20px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .footer {
+    padding: 10px;
   }
 }

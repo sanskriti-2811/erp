@@ -85,3 +85,14 @@
   font-weight: bold;
   text-transform: capitalize;
 }
+
+@media (max-width: 768px) {
+  .orders-calendar-container {
+    padding: 20px;
+    align-items: center;
+  }
+  
+  .react-calendar {
+    max-width: 100%;
+  }
+}

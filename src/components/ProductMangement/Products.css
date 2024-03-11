@@ -1,4 +1,3 @@
-/* src/components/Products.css */
 .products-container {
   padding: 20px;
 }
@@ -57,4 +56,20 @@ td {
 
 tr:hover {
   background-color: #f9f9f9;
+}
+
+@media (max-width: 768px) {
+  form {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  button {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  table {
+    overflow-x: auto;
+  }
 }
