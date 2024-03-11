@@ -19,27 +19,19 @@ Getting Started
 To get a local copy up and running follow these simple steps.
 
 ## Prerequisites
-Node.js
-npm
-# Installation
-Clone the repo
-sh
-Copy code
-git clone https://github.com/sanskriti-2811/erp.git
-Navigate to the project directory
-sh
-Copy code
-cd erp
-## Install dependencies
-sh
-Copy code
-npm install
-Usage
-Run the development server
-sh
-Copy code
-npm start
-Open your browser and visit: http://localhost:3000
+## Node.js & npm
+Make sure you have Node.js and npm installed on your machine. You can download them from [here](https://nodejs.org/).
+
+## Installation
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/sanskriti-2811/erp.git
+2. cd erp
+3. npm install
+4. npm start
+
+This code will provide clear instructions for installing Node.js, cloning the repository, installing dependencies, and running the development server.
+
 ## Project Structure
 
 ### Product Management
@@ -74,9 +66,9 @@ Open your browser and visit: http://localhost:3000
 
 
 ## Technologies Used
-React.js
-Material-UI
-Contributing
+- **React.js**
+- **Material-UI**
+## Contributing
 Contributions are welcome! If you have any ideas, improvements, or bug fixes, feel free to open an issue or submit a pull request.
 
 ## License
