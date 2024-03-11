@@ -1,37 +1,47 @@
-##Project Name
+## ERP System
+
 This project is an ERP (Enterprise Resource Planning) system developed using React.js and Material-UI for the front end. It includes features for managing products and orders.
 
-##Features
-Product Management:
+## Live Demo
+Check out the live demo of the project: ERP System Demo
+
+## Features
+# Product Management:
 
 Add new products with details such as name, category, price, and stock.
 Edit existing products.
 Delete products from the list.
-Order Management:
+# Order Management:
 
 Add new orders with customer name, status (Pending or Shipped), and expected delivery date.
 Delete orders.
 View orders on a calendar.
 Getting Started
-Clone the repository:
+To get a local copy up and running follow these simple steps.
 
-bash
+## Prerequisites
+Node.js
+npm
+# Installation
+Clone the repo
+sh
 Copy code
-git clone https://github.com/your-username/erp-system.git
-cd erp-system
-Install dependencies:
-
-bash
+git clone https://github.com/sanskriti-2811/erp.git
+Navigate to the project directory
+sh
+Copy code
+cd erp
+## Install dependencies
+sh
 Copy code
 npm install
-Run the development server:
-
-bash
+Usage
+Run the development server
+sh
 Copy code
 npm start
-The application will be running at http://localhost:3000.
-
-Project Structure
+Open your browser and visit: http://localhost:3000
+## Project Structure
 src/
 components/
 ProductManagement/
@@ -48,15 +58,15 @@ ProductManagement.css: CSS file for product management components.
 OrderManagement.css: CSS file for order management components.
 App.js: Main component where other components are rendered.
 index.js: Entry point of the application.
-Technologies Used
+## Technologies Used
 React.js
 Material-UI
 Contributing
 Contributions are welcome! If you have any ideas, improvements, or bug fixes, feel free to open an issue or submit a pull request.
 
-License
+## License
 This project is licensed under the MIT License - see the LICENSE.md file for details.
 
-Acknowledgements
+## Acknowledgements
 Thanks to the React.js and Material-UI teams for providing excellent libraries.
 Icon made by Freepik from www.flaticon.com.
