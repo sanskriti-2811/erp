@@ -3,7 +3,7 @@
 This project is an ERP (Enterprise Resource Planning) system developed using React.js and Material-UI for the front end. It includes features for managing products and orders.
 
 ## Live Demo
-Check out the live demo of the project: Markup :  [ERP System Demo](https://65ef096772d16500082213b9--playful-buttercream-d8ec5a.netlify.app/) 
+Check out the live demo of the project: Markup :  [ERP System Demo](https://main--playful-buttercream-d8ec5a.netlify.app/) 
 ## Features
 # Product Management:
 
