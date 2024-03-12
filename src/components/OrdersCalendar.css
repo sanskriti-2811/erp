@@ -91,7 +91,13 @@
     padding: 20px;
     align-items: center;
   }
-  
+
+  .react-calendar {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
   .react-calendar {
     max-width: 100%;
   }

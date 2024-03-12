@@ -1,7 +1,7 @@
-
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import { AppBar, Toolbar, Button, Typography } from '@mui/material';
+import { AppBar, Toolbar, Button, Typography, IconButton, Drawer, List, ListItem, ListItemText, Divider } from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
 import Dashboard from './components/Dashboard/Dashboard';
 import Products from './components/ProductMangement/Products';
 import Orders from './components/OrderManagement/Orders';
@@ -21,20 +21,64 @@ function App() {
   const totalProducts = productsData.length;
   const totalOrders = ordersData.length;
 
+  // State for mobile menu
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   return (
     <Router>
       <div className="app-container">
+        {/* Responsive Header */}
         <AppBar position="static" className="header">
           <Toolbar>
-            <Typography variant="h5" to="/" className="header-title">
+            <Typography variant="h5" component={Link} to="/" className="header-title">
               ERP System
             </Typography>
-            <Button component={Link} to="/" color="inherit">Dashboard</Button>
-            <Button component={Link} to="/products" color="inherit">Product Management</Button>
-            <Button component={Link} to="/orders" color="inherit">Order Management</Button>
+            {/* Hamburger Menu Icon for Mobile */}
+            <IconButton
+              edge="start"
+              color="inherit"
+              aria-label="menu"
+              className="menu-icon"
+              sx={{ mr: 2, display: { sm: 'none' } }}
+              onClick={toggleMobileMenu}
+            >
+              <MenuIcon />
+            </IconButton>
+            {/* Regular Buttons for Desktop */}
+            <div className="desktop-buttons">
+              <Button component={Link} to="/" color="inherit">Dashboard</Button>
+              <Button component={Link} to="/products" color="inherit">Product Management</Button>
+              <Button component={Link} to="/orders" color="inherit">Order Management</Button>
+            </div>
           </Toolbar>
         </AppBar>
-         
+        
+        {/* Mobile Menu */}
+        <Drawer
+          anchor="left"
+          open={isMobileMenuOpen}
+          onClose={toggleMobileMenu}
+          className="mobile-menu"
+          sx={{ display: { sm: 'none', xs: 'block' } }}
+        >
+          <List>
+            <ListItem button component={Link} to="/" onClick={toggleMobileMenu}>
+              <ListItemText primary="Dashboard" />
+            </ListItem>
+            <ListItem button component={Link} to="/products" onClick={toggleMobileMenu}>
+              <ListItemText primary="Product Management" />
+            </ListItem>
+            <ListItem button component={Link} to="/orders" onClick={toggleMobileMenu}>
+              <ListItemText primary="Order Management" />
+            </ListItem>
+          </List>
+          <Divider />
+        </Drawer>
+
         <div className="main-content">
           <Routes>
             <Route

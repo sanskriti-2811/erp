@@ -9,16 +9,19 @@
 .order-list {
   list-style-type: none;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .order-item {
   background-color: #f9f9f9;
   padding: 10px;
-  margin-bottom: 10px;
+  margin: 5px;
   border-radius: 4px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: calc(50% - 10px);
 }
 
 .order-item button {
@@ -34,5 +37,26 @@
   .order-list-container {
     margin-left: 0;
     margin-top: 20px;
+    padding: 10px;
+  }
+
+  .order-list {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .order-item {
+    width: 100%;
+  }
+
+  .order-item button {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 450px) {
+  .order-item {
+    width: 100%;
   }
 }

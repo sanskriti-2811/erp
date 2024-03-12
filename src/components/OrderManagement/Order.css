@@ -1,15 +1,6 @@
-body {
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
-  background-color: #f2f2f2;
-  color: black;
-}
-
 .orders-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
   padding: 20px;
+  text-align: center;
 }
 
 .order-form {
@@ -35,6 +26,28 @@ body {
 
 @media (min-width: 768px) {
   .orders-container {
+    display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .orders-container {
+    padding: 10px;
+  }
+
+  .order-form,
+  .order-calendar,
+  .order-list {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 450px) {
+  .order-form,
+  .order-calendar,
+  .order-list {
+    padding: 5px;
   }
 }

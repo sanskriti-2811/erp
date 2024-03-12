@@ -37,5 +37,31 @@
   .order-form-container {
     margin-left: 0;
     margin-top: 20px;
+    padding: 10px;
+  }
+
+  .order-form {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .order-form label {
+    width: 100%;
+  }
+
+  .order-form input,
+  .order-form select {
+    width: calc(50% - 10px);
+  }
+
+  .order-form button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+  .order-form input,
+  .order-form select {
+    width: 100%;
   }
 }
